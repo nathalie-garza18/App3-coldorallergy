@@ -86,13 +86,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     top: 0;
     left: -100vw;
     overflow-y: auto;
-    z-index: 0;
+    z-index: 1;
     background-color: hsl(0,0%,100%);
 }
 
   .page:target {
     left: 0vw;
-    z-index: 1;
+    z-index: 2;
 }
 	
 .body {
@@ -106,13 +106,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     top: 0;
     left: -100vw;
     overflow-y: auto;
-    z-index: 0;
+    z-index: 2;
     background-color: hsl(0,0%,100%);
 }
 
   .page:target {
     left: 0vw;
-    z-index: 1;
+    z-index: 3;
 }
 
 <style>	
@@ -127,14 +127,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     top: 0;
     left: -100vw;
     overflow-y: auto;
-    z-index: 0;
+    z-index: 3;
     background-color: hsl(0,0%,100%);
 }
 
   .page:target {
     left: 0vw;
-    z-index: 1;
+    z-index: 4;
 }
+	.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 4;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: results;
+}
+
 </style>
  
 
