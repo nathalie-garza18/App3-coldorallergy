@@ -48,8 +48,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count);
         }
 
+	document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent"
   </script>
 
 
@@ -160,7 +162,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
-
+<footer class="w3-bottom w3-container w3-flat-carrot">
 
     	</div>
 </div>
@@ -175,7 +177,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
-
+<footer class="w3-bottom w3-container w3-flat-carrot">
 	
 	</div>
 </div>	
@@ -188,7 +190,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
-
+<footer class="w3-bottom w3-container w3-flat-carrot">
 
 	</div>
 </div>
@@ -201,7 +203,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 </div><!-- /content -->
-
+<footer class="w3-bottom w3-container w3-flat-carrot">
 
 	
 	</div>
@@ -211,8 +213,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1> Results </h1>
 	</div>
 	<div id = "content" class = "w3-container">
-	<p> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent </p>
-
+	<a href="#one" class="w3-btn w3-black w3-round"> Click to view Results! </a>
+	<p id="results"></p>
+		
+		
+		
+	
+	
+	
 	
 	
 	
