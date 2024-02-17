@@ -206,29 +206,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 </div>
 	
-<div class ="page3" id="three">
-	<div class="header"class="w3-container w3-flat-carrot">
-		<h1>Question 3 </h1>
-	</div>
-
-	<div id="content" class="w3-container">
-	<p> Do you have a sore throat?</p>
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-
-</div>
-	</div>
+<div class="page3" id="three">
+    <div class="header w3-container w3-flat-carrot">
+        <h1>Question 3</h1>
+    </div>
+    <div id="content" class="w3-container">
+        <p>Do you have a sore throat?</p>
+        <a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+    </div>
 </div>
 	
 <div class ="page4" id="four">
 	<div class = "header" class="w3-container w3-flat-carrot">
 		<h1> Question 4 </h1>
 	</div>
-
-	<div id="content" class="w3-container">
-	<p> Are your symptoms seasonal or chronic? </p>
-	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<div id="content" class="w3-container">	
+		<p> Are your symptoms seasonal or chronic? </p>
+		<a href="#resultText"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        	<a href="#resultText"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
 </div>	
 	</div>
@@ -261,7 +257,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             var allergyPercent = total === 0 ? 0 : (allergy_count / total) * 100;
             var coldPercent = total === 0 ? 0 : (cold_count / total) * 100;
             var resultText = document.getElementById("resultText");
-            resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%<br> Probability it is a cold = " + coldPercent + "%";
+            resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" <br> Probability it is a cold = " + coldPercent + "%";
         }
 
                 results();
