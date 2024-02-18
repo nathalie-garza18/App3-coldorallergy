@@ -55,8 +55,8 @@ function results() {
     var total = allergy_count + cold_count;
     var allergyPercent = total === 0 ? 0 : (allergy_count / total) * 100;
     var coldPercent = total === 0 ? 0 : (cold_count / total) * 100;
-    var resultText = document.getElementById("resultText");
-    resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "% Probability it is a cold = " + coldPercent + "%";
+    var initialText = document.getElementById("results");
+    initialText.innerHTML = "Probability it is allergies = " + allergyPercent + "% <br> Probability it is a cold = " + coldPercent + "%";
 }
 
   </script>
@@ -75,33 +75,14 @@ function results() {
     top: 0;
     left: -100vw;
     overflow-y: auto;
+    z-index: 0;
     background-color: hsl(0, 0%, 100%);
-    transition: left 0.5s;
 }
 
 .page:target {
     left: 0vw;
     z-index: 1;
-}
 
-.page:nth-of-type(2):target {
-    z-index: 2;
-}
-
-.page:nth-of-type(3):target {
-    z-index: 3;
-}
-
-.page:nth-of-type(4):target {
-    z-index: 4;
-}
-
-.page:nth-of-type(5):target {
-    z-index: 5;
-}
-
-.page:nth-of-type(6):target {
-    z-index: 6;
 }
 	footer {
 	    position: fixed;
@@ -127,7 +108,7 @@ function results() {
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page1" id="one">
+<div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
@@ -141,21 +122,21 @@ function results() {
     	</div>
 </div>
 
-<div class="page2" id="two">
+<div class="page" id="two">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
         <div id="content" class="w3-container">
 	<p> Do you have a fever? </p>   
-	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
  </div>
 
     	</div>
 </div>
 	
-<div class="page3" id="three">
+<div class="page" id="three">
     <div class="header w3-container w3-flat-carrot">
         <h1>Question 3</h1>
     </div>
@@ -166,54 +147,29 @@ function results() {
     </div>
 </div>
 	
-<div class ="page4" id="four">
+<div class ="page" id="four">
 	<div class = "header" class="w3-container w3-flat-carrot">
 		<h1> Question 4 </h1>
 	</div>
 	<div id="content" class="w3-container">	
 		<p> Are your symptoms seasonal or chronic? </p>
-		<a href="#resultText"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        	<a href="#resultText"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
 </div>	
 	</div>
 </div>
 	
-<div class ="page5" id="resultText">
+<div class ="page" id="five">
 	<div class = "w3-container w3-flat-carrot">
 		<h1> Results </h1>
 	</div>
 	<div id = "content" class = "w3-container">
-	<p id="resultText"></p>
+	<p id="results"></p>
+	<a href = "five" onclick="changeText();" class="w3-btn w3-black">Click Here for Results!</a>
     </div>
 </div>
-<script>
-        var allergy_count = 0;
-        var cold_count = 0;
 
-        function allergyAdd() {
-            allergy_count = allergy_count + 1;
-            alert(allergy_count);
-        }
-
-        function coldAdd() {
-            cold_count = cold_count + 1;
-            alert(cold_count);
-        }
-
-        function results() {
-            var total = allergy_count + cold_count;
-            var allergyPercent = total === 0 ? 0 : (allergy_count / total) * 100;
-            var coldPercent = total === 0 ? 0 : (cold_count / total) * 100;
-            var resultText = document.getElementById("resultText");
-            resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" <br> Probability it is a cold = " + coldPercent + "%";
-        }
-
-                results();
-    </script>
-
-
-		
 		
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
