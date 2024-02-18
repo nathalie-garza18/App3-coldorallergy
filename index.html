@@ -53,9 +53,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    result.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"
 	}
 	//I included variables in the script including one that counts points for allergies, and one that counts for colds. 
-	// I also included a function that adds up the number of times allergies/cold was selected. 
-	// The function diagnosisResults determines the allergy and cold percent by dividing the total count by 4 (total num of questions)
-	// and multiplying that number by 100. result.innerHTML then takes these values and displays them.
+	//I also included a function that adds up the number of times allergies/cold was selected. 
+	//The function diagnosisResults determines the allergy and cold percent by dividing the total count by 4 (total num of questions)
+	//and multiplying that number by 100. result.innerHTML then takes these values and displays them.
 </script>
 
 	
@@ -95,7 +95,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-// This page prompts the user to continue to find out whether they may have allergies or a cold.
+
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -107,7 +107,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
+<!-- This page prompts the user to continue to see if they have allergies or a cold and starts the questionnaire -->
 
+	
 <div class="page" id="two">
 	--> Changing the ids moves onto the next page.
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -120,7 +122,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
-		
+<!-- The buttons on each question when clicked move the user to the next page and also keep count for whether allergies or 
+      a cold is the most likely diagnosis-->
+	
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -153,10 +157,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<button class="w3-button w3-black" onclick="diagnosisResults()">Click Here to View Results</button>
 		<p id="result"></p> 
-		// Displays result by prompting the function diagnosisResults to run once button is pressed on results page.
+		
 	</div>
 </div>	
-
+<!-- Displays result by prompting the function diagnosisResults to run once the button is pressed on the results page-->
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p> DIY!</p> 
 </footer>
