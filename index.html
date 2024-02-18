@@ -68,7 +68,7 @@ function results() {
      margin: 0em;
 }
 
-.page1 {
+.page0 {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -88,20 +88,20 @@ function results() {
      margin: 0em;
 }
 
-.page2 {
+.page1 {
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: -100vw;
     overflow-y: auto;
-    z-index: 2;
+    z-index: 1;
     background-color: hsl(0,0%,100%);
 }
 
   .page2:target {
     left: 0vw;
-    z-index: 3;
+    z-index: 2;
 }
 
  .body {
@@ -119,7 +119,7 @@ function results() {
     background-color: hsl(0,0%,100%);
 }
 
-  .page3:target {
+  .page4:target {
     left: 0vw;
     z-index: 4;
 }
