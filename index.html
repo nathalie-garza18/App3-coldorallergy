@@ -45,7 +45,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 	
-	function percentage(){  
+	function diagnosisResults(){  
 	    allergyPercent = (allergy_count/4) * 100
 	    coldPercent = (cold_count/4) * 100
 	    var result = document.getElementById("result")
@@ -145,7 +145,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<button class="w3-button w3-black" onclick="percentage()">Calculate</button>
+		<button class="w3-button w3-black" onclick="diagnosisResults()">Calculate</button>
 		<p id="result"></p>
 	</div>
 </div>	
