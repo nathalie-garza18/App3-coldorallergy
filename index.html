@@ -65,7 +65,7 @@ function results() {
 
 <style>	
 .body {
-     margin: 0em;
+    margin: 0em;
 }
 
 .page {
@@ -75,86 +75,33 @@ function results() {
     top: 0;
     left: -100vw;
     overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
+    background-color: hsl(0, 0%, 100%);
+    transition: left 0.5s;
 }
 
-  .page:target {
+.page:target {
     left: 0vw;
     z-index: 1;
-}	
-
-.body {
-     margin: 0em;
 }
 
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 1;
-    background-color: hsl(0,0%,100%);
-}
-
-  .page:target {
-    left: 0vw;
+.page:nth-of-type(2):target {
     z-index: 2;
 }
 
- .body {
-     margin: 0em;
-}
-
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
+.page:nth-of-type(3):target {
     z-index: 3;
-    background-color: hsl(0,0%,100%);
 }
 
-  .page:target {
-    left: 0vw;
+.page:nth-of-type(4):target {
     z-index: 4;
 }
-.body {
-     margin: 0em;
-}
 
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 4;
-    background-color: hsl(0,0%,100%);
-}
-
-  .page:target {
-    left: 0vw;
+.page:nth-of-type(5):target {
     z-index: 5;
 }
-   .page {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: -100vw;
-        overflow-y: auto;
-        z-index: 5;
-        background-color: hsl(0, 0%, 100%);   
-}
-	.page:target {
-        left: 0vw;
-        z-index: 6;
+
+.page:nth-of-type(6):target {
+    z-index: 6;
 }
 	footer {
 	    position: fixed;
