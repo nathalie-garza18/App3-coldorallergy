@@ -51,17 +51,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		alert(cold_count);
         }
 
-function results() {
-    var total = allergy_count + cold_count;
-    var allergyPercent = total === 0 ? 0 : (allergy_count / total) * 100;
-    var coldPercent = total === 0 ? 0 : (cold_count / total) * 100;
-    var initialText = document.getElementById("results");
-    initialText.innerHTML = "Probability it is allergies = " + allergyPercent + "% <br> Probability it is a cold = " + coldPercent + "%";
+function diagnosisResults() {
+    var allergyPercent = (allergy_count/4) * 100;
+    var coldPercent = (cold_count/4) * 100;
+    document.getElementById("results").innerHTML = "Probability it is allergies = " + allergyPercent + "% <br> Probability it is a cold = " + coldPercent + "%";
 }
-
-  </script>
-
-
+	</script>
 
 <style>	
 .body {
@@ -114,9 +109,9 @@ function results() {
 	</div>
 	
         <div id="content" class="w3-container">
-	<p> Are your eyes watery or itchy? </p>   
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<p> Are your eyes watery or itchy? </p>   
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
  </div>
 
     	</div>
@@ -128,24 +123,22 @@ function results() {
 	</div>
 	
         <div id="content" class="w3-container">
-	<p> Do you have a fever? </p>   
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<p> Do you have a fever? </p>   
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        	 <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
  </div>
-
-    	</div>
-</div>
 	
-<div class="page" id="three">
-    <div class="header" class="w3-container w3-flat-carrot">
+ <div class="page" id="three">
+    	<div class="header" class="w3-container w3-flat-carrot">
        		<h1>Question 3</h1>
-    </div>
+    	</div>
 	
-    <div id="content" class="w3-container">
+   	 <div id="content" class="w3-container">
         <p> Do you have a sore throat? </p>
         <a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
     </div>
+	 
 </div>
 	
 <div class="page" id="four">
@@ -155,9 +148,10 @@ function results() {
 	
 	<div id="content" class="w3-container">	
 		<p> Are your symptoms seasonal or chronic? </p>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+			<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>	
+	
 </div>
 	
 <div class ="page" id="five">
@@ -166,8 +160,8 @@ function results() {
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p id="results"> Cold or Allergies? Click Below!</p>
-	<a href = "five" onclick="results();" class="w3-button"> Click to View Results! </a>
+	<a onclick="results();" class="w3-button"> Click to View Results! </a>
+	<p id="results"></p>
     </div>
 </div>
 
