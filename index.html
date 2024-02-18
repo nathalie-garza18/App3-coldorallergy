@@ -50,12 +50,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		alert(cold_count);
         }
-	function results(){
-		var total = allergy_count + cold_count;
-		var allergyPercent = total === 0 ? 0 : (allergy_count / total) * 100;
-                var coldPercent = total === 0 ? 0 : (cold_count / total) * 100;
-		var resultText = document.getElementById("resultText");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent + %;
+
+function results() {
+    var total = allergy_count + cold_count;
+    var allergyPercent = total === 0 ? 0 : (allergy_count / total) * 100;
+    var coldPercent = total === 0 ? 0 : (cold_count / total) * 100;
+    var resultText = document.getElementById("resultText");
+    resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "% Probability it is a cold = " + coldPercent + "%";
+}
 
   </script>
 
@@ -138,7 +140,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
   .page4:target {
     left: 0vw;
-    z-index: 5 results;
+    z-index: 5;
 }
    .page5 {
         width: 100vw;
