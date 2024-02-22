@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The purpose of this code is to ask a series of questions that will then tell a user if they are experiencing the symptoms of allergies or a cold.
  
 Known Issues:
-blah, blah, blah, blah
+
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -37,8 +37,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	//Initializing variables for allergy and cold count
         var allergy_count = 0;
         var cold_count = 0;
+	//Functions for allergy and cold that gets called and adds one count based on the button pressed
         function allergyAdd(){
             allergy_count = allergy_count + 1;
         }
@@ -47,18 +49,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 	
 	function diagnosisResults(){  
-	    allergyPercent = (allergy_count/4) * 100
-	    coldPercent = (cold_count/4) * 100
+	    var allergyPercent = (allergy_count/4) * 100
+	    var coldPercent = (cold_count/4) * 100
+	    // Both variables above show the calculations used to determine the percentages and stores them in the program
 	    var result = document.getElementById("result")
 	    result.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"
 	}
-	//I included variables in the script including one that counts points for allergies, and one that counts for colds. 
-	//I also included a function that adds up the number of times allergies/cold was selected. 
 	//The function diagnosisResults determines the allergy and cold percent by dividing the total count by 4 (total num of questions)
 	//and multiplying that number by 100. result.innerHTML then takes these values and displays them.
 </script>
 
-	
+<!--Formatting for the pages that follow and includes characteristics such as width, height, position and z-index -->
 <style>	
 .body {
      margin: 0em;
@@ -81,7 +82,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
-	
+<!-- The code below codes for the first page in the program that prompts the user to click the get started button and start the survey.-->	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
@@ -96,6 +97,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<!-- This code is for the first question page. Based on whether the user clicks yes or no the program adds one point for allergies or one for cold.-->	
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -107,7 +109,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
-<!-- This page prompts the user to continue to see if they have allergies or a cold and starts the questionnaire -->
+<!-- This codes for the second question in the program -->
 
 	
 <div class="page" id="two">
@@ -135,7 +137,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>	
-	
+<!--This codes for the final question page and takes the user to the final page titled results.-->	
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -147,7 +149,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>	
-
+<!--This page codes for the results of the questionnaire. When the user clicks on the view results button, the calculated percentages appear.
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
@@ -159,7 +161,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 	</div>
 </div>	
-<!-- Displays result by prompting the function diagnosisResults to run once the button is pressed on the results page-->
+<!-- Displays results by prompting the function diagnosisResults to run once the button is pressed on the results page-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p> DIY!</p> 
